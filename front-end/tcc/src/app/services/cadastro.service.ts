@@ -19,6 +19,10 @@ export class CadastroService {
     return this.http.get(`${this.baseUrl}/categoria/${categoriaId}`);
   }
 
+  obterCategorias(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/categoria`);
+  }
+
   atualizarCategoria(categoriaId: number, categoria: any): Observable<any> {
     return this.http.put(`${this.baseUrl}/categoria/${categoriaId}`, categoria);
   }
@@ -32,6 +36,10 @@ export class CadastroService {
     return this.http.get(`${this.baseUrl}/pergunta/${perguntaId}`);
   }
 
+  obterPerguntas(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/pergunta}`);
+  }
+
   atualizarPergunta(perguntaId: number, pergunta: any): Observable<any> {
     return this.http.put(`${this.baseUrl}/pergunta/${perguntaId}`, pergunta);
   }
@@ -39,6 +47,10 @@ export class CadastroService {
   // Time
   criarTime(time: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/time`, time);
+  }
+
+  obterTimes(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/time`);
   }
 
   obterTime(timeId: number): Observable<any> {
@@ -56,6 +68,10 @@ export class CadastroService {
 
   obterUsuario(usuarioId: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/usuario/${usuarioId}`);
+  }
+
+  obterUsuarios(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/usuario`);
   }
 
   atualizarUsuario(usuarioId: number, usuario: any): Observable<any> {

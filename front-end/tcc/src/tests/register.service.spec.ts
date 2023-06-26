@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { CadastroService } from '../../app/services/cadastro.service';
+import { CadastroService } from '../app/services/cadastro.service';
 
 describe('CadastroService', () => {
   let service: CadastroService;

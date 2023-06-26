@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { UsuarioFormComponent } from '../../app/component/usuario-form/usuario-form.component';
-import { CadastroService } from '../../app/services/cadastro.service';
+import { UsuarioFormComponent } from '../app/component/usuario-form/usuario-form.component';
+import { CadastroService } from '../app/services/cadastro.service';
 import { of, throwError } from 'rxjs';
 
 describe('UsuarioFormComponent', () => {

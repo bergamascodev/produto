@@ -7,15 +7,15 @@ import { PerguntaFormComponent } from './component/pergunta-form/pergunta-form.c
 import { TimeFormComponent } from './component/time-form/time-form.component';
 import { UsuarioFormComponent } from './component/usuario-form/usuario-form.component';
 import { AuthService } from './services/auth.service';
+import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
-  // { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'categorias', component: CategoriaFormComponent },
   { path: 'pergunta', component: PerguntaFormComponent, canActivate: [AuthService] },
   { path: 'time', component: TimeFormComponent, canActivate: [AuthService] },
   { path: 'usuario', component: UsuarioFormComponent },
-  { path: '', redirectTo: '/categorias', pathMatch: 'full' },
   { path: '**', redirectTo: '/categorias', pathMatch: 'full' }
 ];
 

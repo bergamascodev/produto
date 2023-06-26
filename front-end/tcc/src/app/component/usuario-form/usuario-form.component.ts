@@ -29,7 +29,7 @@ export class UsuarioFormComponent implements OnInit {
   }
 
   loadTimes() {
-    this.cadastroService.obterTime().subscribe(
+    this.cadastroService.obterTimes().subscribe(
       (time) => {
         this.times = time;
       },
