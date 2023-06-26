@@ -14,13 +14,13 @@ const routes: Routes = [
   { path: 'categorias', component: CategoriaFormComponent },
   { path: 'pergunta', component: PerguntaFormComponent, canActivate: [AuthService] },
   { path: 'time', component: TimeFormComponent, canActivate: [AuthService] },
-  { path: 'usuario', component: UsuarioFormComponent, canActivate: [AuthService] },
+  { path: 'usuario', component: UsuarioFormComponent },
   { path: '', redirectTo: '/categorias', pathMatch: 'full' },
   { path: '**', redirectTo: '/categorias', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

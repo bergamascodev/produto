@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +22,7 @@ import { UsuarioListaComponent } from './component/usuario-lista/usuario-lista.c
 
 @NgModule({
   declarations: [
+    AppComponent,
     CategoriaFormComponent,
     CategoriaDetalhesComponent,
     PerguntaFormComponent,
@@ -36,6 +39,7 @@ import { UsuarioListaComponent } from './component/usuario-lista/usuario-lista.c
     HttpClientModule,
     ReactiveFormsModule,
     BrowserModule,
+    RouterModule,
     AppRoutingModule
   ],
   bootstrap: [AppComponent],
