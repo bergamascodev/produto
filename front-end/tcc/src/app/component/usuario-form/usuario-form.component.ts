@@ -14,11 +14,11 @@ export class UsuarioFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private cadastroService: CadastroService) {}
 
   ngOnInit() {
-    this.initForm();
-    this.carregarTimes();
+    this.initializeForm();
+    this.loadTimes();
   }
 
-  initForm() {
+  initializeForm() {
     this.usuarioForm = this.formBuilder.group({
       timeId: [null, Validators.required],
       nome: ['', Validators.required],
@@ -28,19 +28,18 @@ export class UsuarioFormComponent implements OnInit {
     });
   }
 
-  carregarTimes() {
-    console.log('OIOIOIOIOI')
-    // this.cadastroService.getTimes().subscribe(
-    //   (times) => {
-    //     this.times = times;
-    //   },
-    //   (error) => {
-    //     console.error('Erro ao carregar times:', error);
-    //   }
-    // );
+  loadTimes() {
+    this.cadastroService.obterTime().subscribe(
+      (time) => {
+        this.times = time;
+      },
+      (error) => {
+        console.error('Erro ao carregar times:', error);
+      }
+    );
   }
 
-  criarUsuario() {
+  createUser() {
     if (this.usuarioForm.invalid) {
       return;
     }

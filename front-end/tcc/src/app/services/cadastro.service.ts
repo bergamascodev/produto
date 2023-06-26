@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CadastroService {
-  private baseUrl = 'http://localhost:8080/cadastro';
+  public baseUrl = 'http://localhost:8080/cadastro';
 
   constructor(private http: HttpClient) { }
 
