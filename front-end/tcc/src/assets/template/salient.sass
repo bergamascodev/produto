@@ -1,0 +1,33 @@
+@import 'tailwindcss/base'
+@import 'tailwindcss/components'
+@import 'tailwindcss/utilities'
+
+// Cores
+$primary-color: #1e40af
+$secondary-color: #fbbf24
+$background-color: #f9fafb
+$error-color: #dc2626
+
+// Tamanho da fonte
+$font-size-base: 16px
+
+// Espaçamento
+$spacing-xs: 0.5rem
+$spacing-sm: 1rem
+$spacing-md: 1.5rem
+$spacing-lg: 2rem
+$spacing-xl: 3rem
+
+// Bordas
+$border-radius-base: 0.25rem
+
+// Botão Salient
+.salient-button
+  @apply px-4 py-2 rounded font-semibold text-white hover:bg-secondary
+
+// Input Salient
+.salient-input
+  @apply block w-full py-2 px-3 rounded border border-gray-300 bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:border-primary
+
+.salient-background
+  background-color: bg-background

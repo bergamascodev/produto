@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/tcc",
             "index": "src/index.html",
@@ -27,6 +27,9 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "customWebpackConfig": {
+              "path": "./webpack.config.ts"
+            },
             "styles": [
               "src/styles.sass"
             ],
@@ -84,7 +87,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/custom-webpack:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
@@ -98,10 +101,16 @@
             "styles": [
               "src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "./webpack.config.ts"
+            }
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
